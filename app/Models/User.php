@@ -66,4 +66,12 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+    public function colleagues()
+    {
+        return $this->belongsToMany(User::class, 'colleagues', 'user_id', 'colleague_id');
+    }
+    public function addedBy()
+    {
+        return $this->belongsToMany(User::class, 'colleagues', 'colleague_id', 'user_id');
+    }
 }

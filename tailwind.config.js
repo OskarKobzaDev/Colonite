@@ -20,5 +20,10 @@ export default {
         },
     },
 
-    plugins: [forms, typography,require('tailwindcss-primeui')],
+    plugins: [
+        forms,
+        typography,
+        require('tailwindcss-primeui'),
+        require('tailwind-scrollbar')({ preferredStrategy: 'pseudoelements' }),
+    ],
 };
